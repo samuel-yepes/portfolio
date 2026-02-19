@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { LightningDivider } from "./LightningBolt";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -26,7 +27,7 @@ const ContactSection = () => {
         >
           <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">Hablemos</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">CONTACTO</h2>
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4" />
+          <LightningDivider className="w-48 mx-auto mt-4" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">

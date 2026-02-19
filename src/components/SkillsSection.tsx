@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { LightningDivider } from "./LightningBolt";
 
 const skills = [
   { name: "React / Next.js", level: 95 },
@@ -28,7 +29,7 @@ const SkillsSection = () => {
         >
           <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">Habilidades</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">SKILLS</h2>
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4" />
+          <LightningDivider className="w-48 mx-auto mt-4" />
         </motion.div>
 
         <div className="space-y-6">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { FloatingLightning } from "./LightningBolt";
 
 const HeroSection = () => {
   return (
@@ -13,6 +14,8 @@ const HeroSection = () => {
 
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+      <div className="absolute inset-0 lightning-flash" />
+      <FloatingLightning className="inset-0 w-full h-full" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
@@ -21,9 +24,13 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.2, duration: 0.8 }}
         >
-          <p className="text-primary font-display text-sm tracking-[0.3em] mb-4 uppercase">
-            Bienvenido a mi universo digital
-          </p>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Zap className="text-primary w-4 h-4" fill="currentColor" />
+            <p className="text-primary font-display text-sm tracking-[0.3em] uppercase">
+              Bienvenido a mi universo digital
+            </p>
+            <Zap className="text-primary w-4 h-4" fill="currentColor" />
+          </div>
         </motion.div>
 
         <motion.h1

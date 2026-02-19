@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import { LightningDivider, FloatingLightning } from "./LightningBolt";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -33,6 +34,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-6 relative bg-secondary/30">
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <FloatingLightning className="inset-0 w-full h-full" />
       <div className="max-w-6xl mx-auto relative" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -42,7 +44,7 @@ const ProjectsSection = () => {
         >
           <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">Mi Trabajo</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">PROYECTOS</h2>
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4" />
+          <LightningDivider className="w-48 mx-auto mt-4" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -52,7 +54,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-              className="group relative bg-card border border-border/50 rounded-sm overflow-hidden hover:border-primary/40 transition-all duration-500"
+              className="group relative bg-card border border-border/50 rounded-sm overflow-hidden hover:border-primary/40 transition-all duration-500 electric-border"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
