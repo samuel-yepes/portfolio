@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { LightningDivider } from "./LightningBolt";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -19,7 +20,7 @@ const AboutSection = () => {
         >
           <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">Conóceme</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">SOBRE MÍ</h2>
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4" />
+          <LightningDivider className="w-48 mx-auto mt-4" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
