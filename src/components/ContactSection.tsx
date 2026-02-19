@@ -25,7 +25,6 @@ const ContactSection = () => {
           transition={{ duration: 0.7 }}
           className="mb-16 text-center"
         >
-          <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">Hablemos</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">CONTACTO</h2>
           <LightningDivider className="w-48 mx-auto mt-4" />
         </motion.div>
