@@ -12,12 +12,16 @@ import {
   SiCss3,
   SiGit,
   SiMysql,
+  SiLaragon,
+  SiLaravel,
 } from "react-icons/si";
 
 const icons = [
   SiReact,
   SiNextdotjs,
   SiTypescript,
+  SiLaragon,
+  SiLaravel,
   SiGit,
   SiTailwindcss,
   SiPostgresql,
