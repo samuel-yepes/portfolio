@@ -19,9 +19,6 @@ const AboutSection = () => {
           transition={{ duration: 0.7 }}
           className="mb-16 text-center"
         >
-          <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-3">
-            Conóceme
-          </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-gradient-gold">
             SOBRE MÍ
           </h2>
