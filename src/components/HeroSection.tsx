@@ -97,16 +97,13 @@ const HeroSection = () => {
           >
             Ver Proyectos
           </button>
-          <button
-            onClick={() =>
-              document
-                .querySelector("#contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="px-8 py-3 border border-primary/50 text-primary font-display text-sm tracking-wider uppercase rounded-sm hover:bg-primary/10 transition-all duration-300"
+          <a
+            href="/portfolio.pdf"
+            download
+            className="px-8 py-3 border border-primary/50 text-primary font-display text-sm tracking-wider uppercase rounded-sm hover:bg-primary/10 transition-all duration-300 inline-flex items-center justify-center gap-2"
           >
-            Contacto
-          </button>
+            Descargar CV
+          </a>
         </motion.div>
       </div>
 
