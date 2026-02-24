@@ -9,6 +9,7 @@ import project4 from "@/assets/RaceX.png";
 import project5 from "@/assets/ClimaTrack.png";
 import project6 from "@/assets/CrudStudent.png";
 import project7 from "@/assets/Invitacion.png";
+import project8 from "@/assets/JuegoPrevencion.png";
 
 type Project = {
   title: string;
@@ -80,6 +81,15 @@ const projects: Project[] = [
     tags: ["Tailwind CSS", "TypeScript", "React"],
     codeUrl: "https://github.com/samuel-yepes/anniversary-rendezvous",
     demoUrl: "https://invitacionaniversario.vercel.app/",
+  },
+  {
+    title: "Juego para la prevencion del bullying",
+    description:
+      "Juego educativo interactivo para prevenir el acoso escolar, con escenarios y actividades que fomentan el respeto y la empatía.",
+    image: project8,
+    tags: ["TypeScript", "React", "next.js"],
+    codeUrl: "https://github.com/samuel-yepes/kindness-quest",
+    demoUrl: "https://kindness-quest-two.vercel.app/",
   },
 ];
 
