@@ -56,6 +56,15 @@ const projects: Project[] = [
     codeUrl: "https://github.com/samuel-yepes/Crud-estudiantes",
   },
   {
+    title: "Juego para la prevencion del bullying",
+    description:
+      "Juego educativo interactivo para prevenir el acoso escolar, con escenarios y actividades que fomentan el respeto y la empatía.",
+    image: project8,
+    tags: ["TypeScript", "React", "next.js"],
+    codeUrl: "https://github.com/samuel-yepes/kindness-quest",
+    demoUrl: "https://kindness-quest-two.vercel.app/",
+  },
+  {
     title: "Juego sencillo de Moto",
     description:
       "Domina las pistas y salta hacia la victoria en este emocionante juego de motos diseñado para jugadores de todas las edades",
@@ -81,15 +90,6 @@ const projects: Project[] = [
     tags: ["Tailwind CSS", "TypeScript", "React"],
     codeUrl: "https://github.com/samuel-yepes/anniversary-rendezvous",
     demoUrl: "https://invitacionaniversario.vercel.app/",
-  },
-  {
-    title: "Juego para la prevencion del bullying",
-    description:
-      "Juego educativo interactivo para prevenir el acoso escolar, con escenarios y actividades que fomentan el respeto y la empatía.",
-    image: project8,
-    tags: ["TypeScript", "React", "next.js"],
-    codeUrl: "https://github.com/samuel-yepes/kindness-quest",
-    demoUrl: "https://kindness-quest-two.vercel.app/",
   },
 ];
 

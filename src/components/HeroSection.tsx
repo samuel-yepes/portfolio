@@ -98,25 +98,19 @@ const HeroSection = () => {
             Ver Proyectos
           </button>
           <a
-            href="/portfolio.pdf"
-            download
-            className="px-8 py-3 border border-primary/50 text-primary font-display text-sm tracking-wider uppercase rounded-sm hover:bg-primary/10 transition-all duration-300 inline-flex items-center justify-center gap-2"
+            href="/Hoja_de_vida.pdf"
+            download="Samuel_Yepes_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-primary/50 text-primary 
+            font-display text-sm tracking-wider uppercase rounded-sm 
+            hover:bg-primary/10 transition-all duration-300 
+            inline-flex items-center justify-center gap-2"
           >
             Descargar CV
           </a>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 4.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-muted-foreground text-xs tracking-widest uppercase">Scroll</span>
-        <ChevronDown className="text-primary animate-float" size={20} />
-      </motion.div> */}
     </section>
   );
 };
