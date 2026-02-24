@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import imgLogo from "@/assets/Logo.png";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
@@ -42,7 +43,7 @@ const Navbar = () => {
           className="font-display text-lg font-bold text-gradient-gold tracking-widest"
         >
           <img
-            src="/src/assets/logo.png"
+            src={imgLogo}
             alt="Logo"
             className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
           />
