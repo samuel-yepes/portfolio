@@ -126,7 +126,7 @@ const ProjectsSection = () => {
         </motion.div>
 
         {/* CAROUSEL */}
-        <div className="overflow-hidden">
+        <div className="relative w-full overflow-hidden">
           <motion.div
             ref={carouselRef}
             drag="x"

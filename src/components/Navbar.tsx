@@ -37,8 +37,15 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => handleClick("#hero")} className="font-display text-lg font-bold text-gradient-gold tracking-widest">
-          PORTFOLIO
+        <button
+          onClick={() => handleClick("#hero")}
+          className="font-display text-lg font-bold text-gradient-gold tracking-widest"
+        >
+          <img
+            src="/src/assets/logo.png"
+            alt="Logo"
+            className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
+          />
         </button>
 
         {/* Desktop */}

@@ -12,7 +12,7 @@ const Index = () => {
   const [curtainDone, setCurtainDone] = useState(false);
 
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen overflow-hidden">
       <CurtainAnimation onComplete={() => setCurtainDone(true)} />
       <div className={`transition-opacity duration-500 ${curtainDone ? "opacity-100" : "opacity-0"}`}>
         <Navbar />
