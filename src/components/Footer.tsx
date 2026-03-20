@@ -1,4 +1,3 @@
-import { Zap } from "lucide-react";
 import logo from "@/assets/Logo.png";
 
 const Footer = () => {

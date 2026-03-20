@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Zap, Briefcase } from "lucide-react";
-import { LightningDivider } from "./LightningBolt";
 
 interface Experience {
   date: string;

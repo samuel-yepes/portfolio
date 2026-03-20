@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, MapPin, Phone, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Phone, ExternalLink, Github, Linkedin } from "lucide-react";
 import { LightningDivider } from "./LightningBolt";
 import Lightning from "@/components/ui/Lightning";
 
@@ -55,23 +55,48 @@ const ContactSection = () => {
               trabajar juntos para hacerlas realidad.
             </p>
 
-            {[
-              { icon: Mail, label: "Email", value: "syepesmolina@gmail.com" },
-              { icon: Phone, label: "Teléfono", value: "+57 3162675918" },
-              { icon: MapPin, label: "Ubicación", value: "Cartagena, Colombia" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-4">
-                <div className="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-sm bg-primary/5">
-                  <item.icon size={20} className="text-primary" />
+            {/* Lista de Contacto */}
+            <div className="space-y-6">
+              {[
+                { icon: Mail, label: "Email", value: "syepesmolina@gmail.com" },
+                { icon: Phone, label: "Teléfono", value: "+57 3162675918" },
+                { icon: MapPin, label: "Ubicación", value: "Cartagena, Colombia" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-sm bg-primary/5">
+                    <item.icon size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-muted-foreground text-xs uppercase tracking-wider">
+                      {item.label}
+                    </p>
+                    <p className="text-foreground">{item.value}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-muted-foreground text-xs uppercase tracking-wider">
-                    {item.label}
-                  </p>
-                  <p className="text-foreground">{item.value}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* 2. Nueva sección de Redes Sociales */}
+            <div className="pt-2 flex gap-4">
+              <a
+                href="https://www.linkedin.com/in/samuel-yepes-b4a28b266/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-sm bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://github.com/samuel-yepes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-sm bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+            </div>
 
             {/* Gmail CTA */}
             <div className="pt-4">
