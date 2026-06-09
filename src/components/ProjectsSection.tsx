@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Automatiza la extracción y visualización de información de portátiles ThinkPad mediante web scraping y análisis con IA.",
     image: project9,
     tags: ["React", "Playwright", "Node.js", "MongoDB", "Python", "Groq"],
-    category: ["web"],
+    category: ["web","backend"],
     featured: true,
     demoUrl: "https://scrapeflowapp.vercel.app/",
     codeUrl: "https://github.com/samuel-yepes/portfolio.git",
