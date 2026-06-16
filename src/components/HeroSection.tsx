@@ -3,6 +3,7 @@ import { ChevronDown, Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { FloatingLightning } from "./LightningBolt";
 import Antigravity from "@/components/ui/Antigravity";
+import cv from "@/assets/hoja_de_vida.pdf";
 
 const HeroSection = () => {
   return (
@@ -98,7 +99,7 @@ const HeroSection = () => {
             Ver Proyectos
           </button>
           <a
-            href="/hoja_de_vida.pdf"
+            href={cv}
             download="Samuel_Yepes_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
