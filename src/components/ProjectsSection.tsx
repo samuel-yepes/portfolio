@@ -12,6 +12,7 @@ import project7 from "@/assets/Invitacion.png";
 import project8 from "@/assets/JuegoPrevencion.png";
 import project9 from "@/assets/scrapeflow.png";
 import project10 from "@/assets/empathix.png";
+import project11 from "@/assets/campus3d.png";
 
 const GithubIcon = ({ size = 13 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -53,6 +54,17 @@ const projects: Project[] = [
     featured: true,
     demoUrl: "https://empathix.vercel.app/",
     codeUrl: "https://github.com/samuel-yepes/empathetic-shield.git",
+  },
+  {
+    title: "Campus3D",
+    description:
+      "Aplicación de realidad aumentada para la navegación y explotación de espacios universitarios en 3D.",
+    image: project11,
+    tags: ["React", "TypeScript", "Three.js", "Tailwind CSS"],
+    category: ["web"],
+    featured: true,
+    demoUrl: "https://campus3dapp.vercel.app/",
+    codeUrl: "https://github.com/samuel-yepes/campus-navigator-lite.git",
   },
   {
     title: "Scrapeflow",
