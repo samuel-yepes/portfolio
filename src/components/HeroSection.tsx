@@ -98,7 +98,7 @@ const HeroSection = () => {
             Ver Proyectos
           </button>
           <a
-            href="/Hoja_de_vida.pdf"
+            href="/hoja_de_vida.pdf"
             download="Samuel_Yepes_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
