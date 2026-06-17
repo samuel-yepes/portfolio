@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
+import { lazy, Suspense } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { FloatingLightning } from "./LightningBolt";
-import Antigravity from "@/components/ui/Antigravity";
 import cv from "@/assets/hoja_de_vida.pdf";
+
+// three.js es pesado: se carga de forma diferida tras el primer render.
+const Antigravity = lazy(() => import("@/components/ui/Antigravity"));
 
 const HeroSection = () => {
   return (
@@ -23,6 +26,7 @@ const HeroSection = () => {
 
       {/* Antigravity Effect */}
       <div className="absolute inset-0 z-10">
+        <Suspense fallback={null}>
         <Antigravity
           count={250}
           magnetRadius={12}
@@ -39,6 +43,7 @@ const HeroSection = () => {
           particleShape="capsule"
           fieldStrength={6}
         />
+        </Suspense>
       </div>
 
       {/* Grid overlay */}

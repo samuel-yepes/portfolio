@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Zap, Briefcase } from "lucide-react";
+import Lightfall from "./ui/Lightfall";
 
 interface Experience {
   date: string;
@@ -13,8 +14,7 @@ const experiences: Experience[] = [
   {
     date: "2026 - Presente",
     title: "Desarrollador de Software",
-    company:
-      "Tecnologico Comfenalco / Centro de Innovación y Desarrollo Tecnológico",
+    company: "Tecnologico Comfenalco / Centro de Innovación y Desarrollo Tecnológico",
     description:
       "Diseño y desarrollo de aplicaciones web escalables utilizando Laravel y PostgresSQL ,integración de APIs REST y gestión de bases de datos SQL. Participación en mejoras de arquitectura, optimización de rendimiento y mantenimiento evolutivo de sistemas institucionales.",
   },
@@ -65,8 +65,30 @@ const ExperienceSection = () => {
       ref={ref}
       className="py-20 px-5 relative overflow-hidden bg-background"
     >
-      <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
-
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+              <Lightfall
+                /* SOLUCIÓN: Agrupamos tus colores personalizados en el array de la prop 'colors' */
+                colors={['#dad134', '#dcc841', '#f7ee64']}
+                backgroundColor="#000000"
+                speed={0.5}
+                streakCount={2}
+                streakWidth={1}
+                streakLength={1}
+                glow={1}
+                density={0.6}
+                twinkle={1}
+                zoom={3}
+                backgroundGlow={0.5}
+                opacity={0.3}
+                mouseInteraction
+                mouseStrength={0.5}
+                mouseRadius={1}
+              />
+            </div>
+      {/* Malla de cuadrícula opcional sobre el ferrofluido */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none z-0" />
+      
+      {/* Contenido Principal con z-10 para quedar sobre el fondo */}
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Título */}
         <motion.div

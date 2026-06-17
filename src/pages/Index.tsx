@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import CurtainAnimation from "@/components/CurtainAnimation";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import SkillsSection from "@/components/SkillsSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+
+// Secciones below-the-fold: se cargan de forma diferida para aligerar el
+// bundle inicial y acelerar el primer render del Hero.
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
+const SkillsSection = lazy(() => import("@/components/SkillsSection"));
+const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   const [curtainDone, setCurtainDone] = useState(false);
@@ -19,13 +22,17 @@ const Index = () => {
         <Navbar />
         <main>
           <HeroSection />
-          <AboutSection />
-          <ProjectsSection />
-          <SkillsSection />
-          <ExperienceSection />
-          <ContactSection />
+          <Suspense fallback={null}>
+            <AboutSection />
+            <ProjectsSection />
+            <SkillsSection />
+            <ExperienceSection />
+            <ContactSection />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </div>
   );

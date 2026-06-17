@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 interface AntigravityProps {
@@ -186,10 +186,37 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 };
 
 const Antigravity: React.FC<AntigravityProps> = props => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(true);
+
+  // En móvil reducimos el número de partículas para aliviar la GPU.
+  const isMobile =
+    typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+  const count = props.count ?? 180;
+  const effectiveCount = isMobile ? Math.round(count * 0.5) : count;
+
+  // Pausar el render loop cuando el efecto sale del viewport.
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      entries => setActive(entries[0]?.isIntersecting ?? true),
+      { rootMargin: '100px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <Canvas camera={{ position: [0, 0, 30], fov: 50 }}>
-      <AntigravityInner {...props} />
-    </Canvas>
+    <div ref={wrapperRef} className="w-full h-full">
+      <Canvas
+        camera={{ position: [0, 0, 30], fov: 50 }}
+        dpr={[1, 1.5]}
+        frameloop={active ? 'always' : 'never'}
+      >
+        <AntigravityInner {...props} count={effectiveCount} />
+      </Canvas>
+    </div>
   );
 };
 
