@@ -146,8 +146,37 @@
     animation: lightning-flash 8s ease-in-out infinite;
     background: radial-gradient(ellipse at center, hsl(43 100% 50% / 0.15), transparent 70%);
   }
-}
+  .cyber-scanlines {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.3)
+    );
+    background-size: 100% 4px;
+  }
 
+  .cyber-hex-pattern {
+    background-image: radial-gradient(hsl(43 100% 50% / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .anamorphic-flare {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(43 100% 50% / 0.1) 20%,
+      hsl(48 100% 85% / 0.9) 50%,
+      hsl(43 100% 50% / 0.1) 80%,
+      transparent 100%
+    );
+  }
+
+  .plasma-halo {
+    filter: drop-shadow(0 0 12px hsl(43 100% 50% / 0.8)) drop-shadow(0 0 35px hsl(43 100% 50% / 0.4));
+  }
+}
 
 @keyframes scroll {
   0% {
@@ -161,3 +190,24 @@
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+@keyframes laser-sweep {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes energy-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
