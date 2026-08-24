@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { LightningDivider } from "./LightningBolt";
 import SkillsCarousel from "./ui/SkillsCarousel";
-import Lightfall from "./ui/Lightfall";
 
 const SkillsSection = () => {
   const ref = useRef(null);

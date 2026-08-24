@@ -49,13 +49,13 @@ const Navbar = () => {
           />
         </button>
 
-        {/* Desktop */}
+        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.href}
               onClick={() => handleClick(item.href)}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 tracking-wide uppercase"
+              className="text-sm font-semibold text-zinc-100 hover:text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] transition-colors duration-300 tracking-wider uppercase"
             >
               {item.label}
             </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <button
               key={item.href}
               onClick={() => handleClick(item.href)}
-              className="block w-full text-left px-6 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 transition-colors uppercase tracking-wide"
+              className="block w-full text-left px-6 py-3 text-sm font-semibold text-zinc-100 hover:text-primary hover:bg-secondary/50 transition-colors uppercase tracking-wide"
             >
               {item.label}
             </button>
@@ -94,3 +94,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
