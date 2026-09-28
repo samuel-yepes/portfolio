@@ -13,6 +13,8 @@ import project8 from "@/assets/JuegoPrevencion.png";
 import project9 from "@/assets/scrapeflow.png";
 import project10 from "@/assets/empathix.png";
 import project11 from "@/assets/campus3d.png";
+import project12 from "@/assets/futraining.jpg";
+import project13 from "@/assets/logicorganizacional.jpg";
 
 const GithubIcon = ({ size = 13 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -28,6 +30,7 @@ type Project = {
   title: string;
   description: string;
   image: string;
+  imageClassName?: string;
   tags: string[];
   category: FilterKey[];
   demoUrl?: string;
@@ -72,10 +75,30 @@ const projects: Project[] = [
       "Automatiza la extracción y visualización de información de portátiles ThinkPad mediante web scraping y análisis con IA.",
     image: project9,
     tags: ["React", "Playwright", "Node.js", "MongoDB", "Python", "Groq"],
-    category: ["web","backend"],
+    category: ["web", "backend"],
     featured: true,
     demoUrl: "https://scrapeflowapp.vercel.app/",
     codeUrl: "https://github.com/samuel-yepes/portfolio.git",
+  },
+  {
+    title: "FuTraining",
+    description:
+      "Plataforma web para entrenador personal y preparador físico que presenta catálogo de servicios, planes de entrenamiento personalizado y agendamiento de consultas.",
+    image: project12,
+    imageClassName: "object-top",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    category: ["web"],
+    demoUrl: "https://futraining.vercel.app/",
+  },
+  {
+    title: "Logic Organizacional",
+    description:
+      "Plataforma de consultoría empresarial en Colombia enfocada en fortalecimiento institucional, rediseño de estructuras organizacionales y cumplimiento normativo.",
+    image: project13,
+    imageClassName: "object-top",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
+    category: ["web"],
+    demoUrl: "https://logiorganizacional.vercel.app/"
   },
   {
     title: "Simulador de Firewall",
@@ -295,7 +318,7 @@ const ProjectCard = ({
         src={project.image}
         alt={project.title}
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+        className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06] ${project.imageClassName ?? "object-center"}`}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent" />
 
@@ -458,20 +481,18 @@ const ProjectsSection = () => {
                   relative font-display text-xs tracking-wider uppercase
                   px-5 py-2.5 rounded-sm border flex items-center gap-2
                   transition-all duration-300
-                  ${
-                    isActive
-                      ? "bg-primary text-primary-foreground border-primary glow-gold"
-                      : "bg-card/60 text-muted-foreground border-border/50 hover:border-primary/40 hover:text-primary"
+                  ${isActive
+                    ? "bg-primary text-primary-foreground border-primary glow-gold"
+                    : "bg-card/60 text-muted-foreground border-border/50 hover:border-primary/40 hover:text-primary"
                   }
                 `}
               >
                 {f.label}
                 <span
-                  className={`text-[10px] px-1.5 py-0.5 rounded font-sans ${
-                    isActive
-                      ? "bg-primary-foreground/20 text-primary-foreground"
-                      : "bg-primary/10 text-primary/70"
-                  }`}
+                  className={`text-[10px] px-1.5 py-0.5 rounded font-sans ${isActive
+                    ? "bg-primary-foreground/20 text-primary-foreground"
+                    : "bg-primary/10 text-primary/70"
+                    }`}
                 >
                   {count}
                 </span>
