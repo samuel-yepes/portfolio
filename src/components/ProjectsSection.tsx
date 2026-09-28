@@ -51,7 +51,7 @@ const projects: Project[] = [
     title: "Empathix",
     description:
       "Plataforma de apoyo emocional con IA que ofrece actividades dinámicas y un asistente especializado en prevención del bullying.",
-    image: project10,
+    image: project10, 
     tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Groq"],
     category: ["web"],
     featured: true,
